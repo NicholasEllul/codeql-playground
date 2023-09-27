@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Simple XSS Vulnerability Example</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        // This script takes a URL parameter and directly inserts it into the page without sanitizing it
+        var data = new URLSearchParams(window.location.search);
+        document.getElementById("demo").innerHTML = data.get("userInput");
+    </script>
+
+</body>
+
+</html>
